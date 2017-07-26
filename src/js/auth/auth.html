@@ -3,13 +3,22 @@
     <div class="row">
 
       <div class="col-md-6 offset-md-3 col-xs-12">
-        <h1 class="text-xs-center">Register</h1>
-        <p class="text-xs-center">
+        <!-- <h1 class="text-xs-center">Register</h1> -->
+        <h1 class="text-xs-center" data-ng-bind="::$ctrl.title"></h1>
+        <!-- <p class="text-xs-center">
           <a href="">
             Have an account?
           </a>
+        </p> -->
+        <p class="text-xs-center">
+          <a ui-sref="app.login"
+            ng-show="$ctrl.authType === 'register'">
+              Have an account?
+            </a>
+            <a ui-sref="app.register"
+              ng-show="$ctrl.authType === 'login'"
+            ></a>
         </p>
-
         <form>
           <fieldset>
 
